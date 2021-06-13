@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+$search-height: 2.5rem;
+$search-text-width: 12.5rem;
+$search-text-width-initial: 9.5rem;
+$search-background: #bdd2b6;
+$search-hover-background: rgb(209, 230, 202);
+$search-button-background: #f8ede3;
+
+.search {
+  position: absolute;
+  right: 21%;
+  background: none;
+  border-radius: 200px;
+  height: $search-height;
+  display: flex;
+  align-items: center;
+  transition: all .75s ease-in-out;
+  background-color: $search-background;
+  margin: 5px;
+
+  &__text {
+    font-family: "Poppins", sans-serif;
+    border: 0;
+    background: transparent;
+    outline: 0;
+    color: black;
+    float: left;
+    line-height: $search-height;
+    width: $search-text-width-initial;
+    transition: all .5s ease-in-out;
+    font-size: .8rem;
+    font-weight: bold;
+    padding: 1rem;
+  }
+  
+  &__button {
+    color: black;
+    background: $search-button-background;
+    border-radius: 50%;
+    float: right;
+    height: $search-height;
+    width: $search-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+  }
+  
+  &:hover {
+    background: $search-hover-background;
+  }
+  
+  &:hover > &__text {
+    width: $search-text-width;
+    margin-left: 1rem;
+  }
+  
+  &:hover > &__button {
+    transform: scale(0.75);
+  }
+  &__text:focus {
+      width: $search-text-width;
+      margin-left: 1rem;
+  }
+}

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+.explore-recipe{
+    flex: 0 43%;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px rgba(128, 128, 128, 0.582);
+    cursor: pointer;
+
+    &-header{
+        position: relative;
+    
+        img{
+            width: 100%;
+            object-fit: cover;
+            height: 7rem;
+        }
+        .type{
+            position:absolute;
+            background-color: #eee;
+            top: 10px;
+            font-size: 0.7rem;
+            margin-top: 5px;
+            padding: 0px 20px;
+            padding-right: 8px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    }
+    &-body{
+        padding: 0px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+        .recipe-name{
+            margin: 0;
+        }
+        .fav-button{
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            color: gray;
+            outline: none;
+        }
+        .fav-button.active{
+            color: red;
+        }
+    }
+}
